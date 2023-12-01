@@ -1,0 +1,312 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Base styles for body, with default font set */
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* Navigation Bar Styles */
+nav {
+    background-color: #336699;
+    color: white;
+    padding: 5px 0; /* top and bottom padding */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex; /* for horizontal layout */
+    justify-content: space-around; /* Space out navigation items evenly */
+}
+
+nav ul li {
+    padding: 10px; /* Add padding to each navigation item for spacing */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px; /* Add padding for a larger clickable area */
+    border-radius: 2px; /* rounded corners for hover effect */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    background-color: #859399; /* Color change on hover */
+    color: white; /* Keep text color white */
+}
+
+/* Responsive design for mobile screens */
+@media screen and (max-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    /* Adjust grid layout for smaller screens */
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* styles for main content and footer */
+main {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(900px, 1fr));
+    gap: 30px;
+    max-width: 90%; /* Set a max-width for the grid */
+    margin-left: auto; /* Center the grid horizontally */
+    margin-right: auto;
+    box-sizing: border-box; /* Make sure paddings are included in the width */
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Input and textarea styles */
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Submit button styles */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Submit button hover effect */
+.form-group input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* table {
+    width: 100%;
+    border-collapse: collapse;
+} */
+
+/* th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+} */
+
+
+/* LOGIN PAGE */
+.welcome-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #e8f5e9;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* text for login page */
+.info-section {
+    padding: 20px;
+    position: relative;
+}
+
+.info-section h2 {
+    margin-bottom: 10px;
+}
+
+.info-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.info-section ul li {
+    background: url('icon-check.svg') no-repeat left center;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+/*SELECT STYLING*/
+
+
+/* FORM STYLING */
+/* overall formatting */
+
+form {
+    margin-bottom: 10px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents the flex items from wrapping */
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Prevents the flex container from scrolling */
+    
+}
+
+.form-column {
+    flex: 0 0 30%;
+    overflow-y: auto; /* Enables vertical scrolling if the content is longer than the max-height */
+    max-height: 90vh; /*height of your footer */
+    padding: 20px;
+}
+
+.table-column {
+    flex-grow: 1; /* Takes the remaining space */
+    padding: 20px;
+    overflow-y: auto; /* Enables scrolling for the table if it's taller than the column */
+    max-height: 90vh; /* Adjust based on the height of your header/footer */
+    
+}
+
+#table-display {
+    padding: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px; /* Adjust padding */
+    text-align: left; /* Align text to the left */
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Match the width of other inputs */
+    margin-bottom: 10px; /* Consistent spacing */
+    box-sizing: border-box; /* Consistent box sizing */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+/* To ensure that the footer is always at the bottom */
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    position: relative;
+}
+
+main {
+    padding-bottom: 50px; /* should be equal or larger than the footer's total height to prevent overlap */
+}
+
+/* Sticky footer */
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
